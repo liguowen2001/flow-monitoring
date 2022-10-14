@@ -1,2 +1,9 @@
-package PACKAGE_NAME;public class Main {
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+        Flow.main();
+    }
 }
