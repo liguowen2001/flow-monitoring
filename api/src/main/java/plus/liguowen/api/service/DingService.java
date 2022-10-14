@@ -34,7 +34,6 @@ public class DingService {
         result.put("text", text);
         String jsonString = JSON.toJSONString(result);
         StringEntity entity = new StringEntity(jsonString, "UTF-8");
-        System.out.println(jsonString);
 
         //设置http请求的内容
         httpPost.setEntity(entity);

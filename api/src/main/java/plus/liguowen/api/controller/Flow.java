@@ -46,7 +46,7 @@ public class Flow {
              reader = new BufferedReader(new FileReader(fileRoute));
              String line = reader.readLine();
 
-             analyse(line);
+            // analyse(line);
              while (line != null) {
                  lines.add(line);
                  line = reader.readLine();
