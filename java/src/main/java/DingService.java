@@ -8,6 +8,8 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
+import java.util.Date;
+
 public class DingService {
 
     public static void dingRequest(String message) {
@@ -42,6 +44,8 @@ public class DingService {
             // 从响应模型中获取响应实体
             HttpEntity responseEntity = response.getEntity();
             if (responseEntity != null) {
+                Date date = new Date();
+                System.out.println(date.toLocaleString());
                 System.out.println("响应内容长度为:" + responseEntity.getContentLength());
                 System.out.println("响应内容为:" + EntityUtils.toString(responseEntity));
             }

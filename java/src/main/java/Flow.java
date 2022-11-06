@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -35,6 +36,13 @@ public class Flow {
         BufferedReader reader;
         ArrayList<String> lines = new ArrayList<>();
         ArrayList<Log> logs = new ArrayList<>();
+
+        File file = new File(fileRoute);
+        if (!file.exists()){
+            System.out.println("文件不存在");
+            return "0";
+        }
+
         // 读取文件
         try {
             reader = new BufferedReader(new FileReader(fileRoute));
